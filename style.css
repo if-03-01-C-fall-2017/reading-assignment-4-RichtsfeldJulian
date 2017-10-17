@@ -1,0 +1,75 @@
+
+h1:before {
+   content: counter(Ebene01) " ";
+}
+h1 {
+   counter-reset: Ebene02;
+   counter-increment: Ebene01;
+}
+h2:before {
+   content: counter(Ebene01) "." counter(Ebene02) "\A0\A0\A0";
+   counter-increment: Ebene02;
+}
+h2 {
+    color: #009688;
+}
+.content {
+    background-color: #FAFAFA;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.footer {
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.headline{
+  color: white;
+  font-size: 30px;
+}
+.title {
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #009688;
+
+}
+
+.container {
+  position: relative;
+  width: 22%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #009688;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
